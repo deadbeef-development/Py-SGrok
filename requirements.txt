@@ -1,0 +1,2 @@
+aiohttp~=3.9
+ngrok~=1.2

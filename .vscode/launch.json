@@ -1,0 +1,41 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Send File",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "wormgrok.test.test_send"
+        },
+        {
+            "name": "Debug Receive File",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "wormgrok.test.test_receive"
+        },
+        {
+            "name": "Debug Main: Send File Manually",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "wormgrok",
+            "args": [
+                "send",
+                "--file-path", "test_send_file.txt",
+                "--file-name", "psa.txt"
+            ]
+        },
+        {
+            "name": "Debug Main: Receive File Manually",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "wormgrok",
+            "args": [
+                "receive",
+                "--dest-dir", "test_received_files"
+            ]
+        }
+    ]
+}
